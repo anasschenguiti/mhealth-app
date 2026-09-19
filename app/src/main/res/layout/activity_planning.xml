@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    tools:context=".MainActivity">
+
+    <!-- En-tête avec titre et profil -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_planning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:background="@color/primary_light_blue_alt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/title_planning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mon Planning"
+            android:textColor="@color/text_anthracite"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/profile_small"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:background="@drawable/circle_background"
+            android:padding="4dp"
+            android:contentDescription="Profil médecin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:background="@drawable/edit_text_background"
+            android:spinnerMode="dropdown"
+            app:layout_constraintTop_toBottomOf="@id/title_planning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ScrollView pour le contenu -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/header_planning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Calendrier -->
+            <TextView
+                android:id="@+id/calendar_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calendrier"
+                android:textColor="@color/text_anthracite"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Grille de calendrier (7 jours) -->
+            <GridLayout
+                android:id="@+id/calendar_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="7"
+                android:rowCount="1"
+                android:alignmentMode="alignMargins"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintTop_toBottomOf="@id/calendar_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- Jour 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/white_pure"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lun\n15"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Jour 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/white_pure"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Mar\n16"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Jour 3 (Sélectionné) -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/pastel_salmon"
+                    app:cardElevation="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Mer\n17"
+                        android:textColor="@color/white_pure"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Jour 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/white_pure"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Jeu\n18"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Jour 5 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/white_pure"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Ven\n19"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Jour 6 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/white_pure"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Sam\n20"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Jour 7 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/white_pure"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Dim\n21"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+            <!-- Section Matin -->
+            <TextView
+                android:id="@+id/morning_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matin"
+                android:textColor="@color/text_anthracite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintTop_toBottomOf="@id/calendar_grid"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Chips horaires matin -->
+            <LinearLayout
+                android:id="@+id/morning_slots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintTop_toBottomOf="@id/morning_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/chip_available"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="08:00"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/chip_occupied"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="09:00"
+                        android:textColor="@color/text_gray_medium"
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/chip_available"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:00"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/chip_available"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:00"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Section Après-midi -->
+            <TextView
+                android:id="@+id/afternoon_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Après-midi"
+                android:textColor="@color/text_anthracite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintTop_toBottomOf="@id/morning_slots"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Chips horaires après-midi -->
+            <LinearLayout
+                android:id="@+id/afternoon_slots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintTop_toBottomOf="@id/afternoon_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/chip_available"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14:00"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/chip_occupied"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15:00"
+                        android:textColor="@color/text_gray_medium"
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/chip_available"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16:00"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/chip_available"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17:00"
+                        android:textColor="@color/text_anthracite"
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

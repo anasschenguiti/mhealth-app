@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
+    <application android:allowBackup="true" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:icon="@drawable/ic_launcher_mhealth" android:label="@string/app_name" android:roundIcon="@drawable/ic_launcher_mhealth" android:supportsRtl="true" android:theme="@style/Theme.Medcin_part_PFA_Examun">
+
+        <!-- Entry Point: Login -->
+        <activity android:name=".LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <!-- Admin Activities -->
+        <activity android:name="com.example.application_final.admin.MainActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.admin.MainActivity2" android:exported="false" />
+        <activity android:name="com.example.application_final.admin.MainActivity3" android:exported="false" />
+        <activity android:name="com.example.application_final.admin.SupervisionActivity" android:exported="false" />
+
+        <!-- Secretary Activities -->
+        <activity android:name="com.example.application_final.secretaire.MainActivitySecretary" android:exported="false" />
+        <activity android:name="com.example.application_final.secretaire.dossier_patient" android:exported="false" />
+        <activity android:name="com.example.application_final.secretaire.AjouterPatientActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.secretaire.ModifierPatientActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.secretaire.rendezvous" android:exported="false" />
+        <activity android:name="com.example.application_final.secretaire.AjouterRendezvousActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.secretaire.ModifierRendezvousActivity" android:exported="false" />
+
+        <!-- Patient Activities -->
+        <activity android:name="com.example.application_final.patient.MainActivityPatient" android:exported="false" />
+        <activity android:name="com.example.application_final.patient.RechercheMedecinActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.patient.MedicamentsActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.patient.PatientDossierActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.patient.PatientLabResultsActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.patient.PatientAppointmentsActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.patient.HospitalsMapActivity" android:exported="false" />
+
+        <!-- Doctor Activities -->
+        <activity android:name="com.example.application_final.medcin.MainActivityDoctor" android:exported="false" />
+        <activity android:name="com.example.application_final.medcin.planning" android:exported="false" />
+        <activity android:name="com.example.application_final.medcin.MessagesActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.medcin.LabResultsActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.medcin.ChatActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.medcin.AddMedicineActivity" android:exported="false" />
+        <activity android:name="com.example.application_final.medcin.ProfileActivity" android:exported="false" />
+
+    </application>
+
+</manifest>

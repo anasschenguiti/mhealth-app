@@ -1,0 +1,49 @@
+<resources>
+
+
+    <string name="bonjour_admin">Bonjour, Admin</string>
+    <string name="gestion1">Gestion des comptes utilisateurs</string>
+    <string name="gestion2">Gestion de database</string>
+    <string name="gestion3">Superviser système</string>
+
+    <string name="saisie_patient">Taper le nom du patient</string>
+
+    <string name="ajouter_utilisateur">Ajouter un utilisateur</string>
+    <string name="importer_photo">Importer une photo</string>
+
+    <string name="nom_complet">Nom complet</string>
+    <string name="email">Email</string>
+    <string name="telephone">Numéro de téléphone</string>
+    <string name="sexe">Sexe</string>
+    <string name="date_naissance">Date de naissance</string>
+    <string name="adresse">Adresse</string>
+    <string name="fonction">Fonction / Service</string>
+    <string name="role">Rôle</string>
+    <string name="enregistrer">Enregistrer</string>
+    
+    <!-- Supervision -->
+    <string name="superviser_titre">Superviser le Système</string>
+    <string name="etat_systeme_label">État du système : </string>
+    <string name="etat_systeme_valeur">Fonctionnement normal.</string>
+    <string name="securite_titre">Sécurité et confidentialité</string>
+    <string name="securite_desc">Toutes les données sont chiffrées et sauvegardées régulièrement. Veuillez vérifier les journaux d\'accès pour toute activité suspecte.</string>
+    
+    <!-- Gestion Utilisateurs -->
+    <string name="rechercher_hint">Rechercher un utilisateur</string>
+    <string name="user_placeholder_1">Utilisateur 1</string>
+    <string name="user_placeholder_2">Utilisateur 2</string>
+    <string name="user_placeholder_3">Utilisateur 3</string>
+
+    <string-array name="roles_list">
+        <item>Administrateur</item>
+        <item>Médecin</item>
+        <item>Patient</item>
+        <item>Secrétaire</item>
+    </string-array>
+
+    <string-array name="sexe_list">
+        <item>Homme</item>
+        <item>Femme</item>
+    </string-array>
+
+</resources>

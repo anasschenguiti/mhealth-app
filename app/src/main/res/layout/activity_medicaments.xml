@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainMed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F7FA">
+
+    <TextView
+        android:id="@+id/tvHeaderMedicaments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mes Médicaments"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1F2A44"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMedicaments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

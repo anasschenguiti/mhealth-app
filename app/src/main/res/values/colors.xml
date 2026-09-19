@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Palette de couleurs pour l'espace Médecin -->
+    <!-- Fond principal -->
+    <color name="primary_light_blue">#B3E5FC</color>
+    <color name="primary_light_blue_alt">#E1F5FE</color>
+    
+    <!-- Fond secondaire -->
+    <color name="white_pure">#FFFFFF</color>
+    
+    <!-- Accents pastels -->
+    <color name="pastel_cyan">#4DD0E1</color>
+    <color name="pastel_yellow">#FFD54F</color>
+    <color name="pastel_salmon">#FF8A65</color>
+    <color name="pastel_mint">#81C784</color>
+    
+    <!-- Texte -->
+    <color name="text_anthracite">#37474F</color>
+    <color name="text_gray_medium">#78909C</color>
+    <color name="text_gray_light">#B0BEC5</color>
+    
+    <!-- Autres -->
+    <color name="search_background">#F5F5F5</color>
+    <color name="chip_available">#B3E5FC</color>
+    <color name="chip_occupied">#CFD8DC</color>
+</resources>

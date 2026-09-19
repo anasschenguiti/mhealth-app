@@ -1,0 +1,9 @@
+<resources>
+    <string name="hello">Hello wolrd, it is just test</string>
+
+    <string-array name="composant">
+        <item>ativite</item>
+        <item>services</item>
+        <item>fournisseur de contenu</item>
+    </string-array>
+</resources>

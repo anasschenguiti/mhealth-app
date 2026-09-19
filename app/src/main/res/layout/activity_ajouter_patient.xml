@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouveau Dossier Patient"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sélectionner un Patient"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerPatientUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Antécédents Médicaux"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editPatientAntecedents"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Décrivez les antécédents ici..."
+            android:textColor="#000000"
+            android:padding="16dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top|start"
+            android:layout_marginBottom="24dp"
+            android:inputType="textMultiLine"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description Maladie"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editPatientDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Description détaillée de la maladie..."
+            android:textColor="#000000"
+            android:padding="16dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top|start"
+            android:layout_marginBottom="32dp"
+            android:inputType="textMultiLine"/>
+
+        <Button
+            android:id="@+id/btnSavePatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enregistrer le Patient"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C3E50"
+            android:padding="14dp"/>
+
+    </LinearLayout>
+</ScrollView>

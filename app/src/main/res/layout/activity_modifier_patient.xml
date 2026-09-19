@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifier Patient"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom et Prénom"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editPatientName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom du patient"
+            android:textColor="#000000"
+            android:padding="16dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="24dp"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Antécédents Médicaux"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editPatientAntecedents2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Antécédents..."
+            android:textColor="#000000"
+            android:padding="16dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top|start"
+            android:layout_marginBottom="24dp"
+            android:inputType="textMultiLine"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description Maladie"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editPatientDescription2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Modifier la description..."
+            android:textColor="#000000"
+            android:padding="16dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top|start"
+            android:layout_marginBottom="32dp"
+            android:inputType="textMultiLine"/>
+
+        <Button
+            android:id="@+id/btnUpdatePatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mettre à jour"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2C3E50"
+            android:padding="14dp"/>
+
+    </LinearLayout>
+</ScrollView>

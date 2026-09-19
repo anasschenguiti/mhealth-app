@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainSearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F7FA">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvHeaderSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chercher un médecin"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1F2A44"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Search Input -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Tapez le nom du médecin"
+            android:padding="12dp"
+            android:background="@android:color/transparent"
+            android:textColor="#1F2A44"
+            android:textColorHint="#A0A0A0"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- RecyclerView for doctors -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDoctors"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

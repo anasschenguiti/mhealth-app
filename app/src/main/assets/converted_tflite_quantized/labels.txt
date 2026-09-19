@@ -1,0 +1,3 @@
+0 Pas de maladie
+1 Maladie chronique
+2 Cas d'urgence 

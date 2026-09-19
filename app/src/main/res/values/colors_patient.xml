@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="jaune">#FFFF00</color>
+    <color name="bleu">#0000FF</color>
+    <color name="purple_200">#BB86FC</color> <!-- un violet clair -->
+
+</resources>

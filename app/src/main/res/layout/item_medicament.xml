@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/medName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paracétamol"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1F2A44"/>
+
+        <TextView
+            android:id="@+id/medTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="À prendre à 08:00"
+            android:textSize="14sp"
+            android:textColor="#637381"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

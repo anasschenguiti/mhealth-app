@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/scrollHome" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F5F7FA" android:padding="20dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+
+            <ImageView android:id="@+id/profile_image" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="16dp" android:src="@drawable/profile" android:background="@drawable/circle_mask" android:scaleType="centerCrop" android:clipToOutline="true" />
+
+            <TextView android:id="@+id/tvHello" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bonjour, Patient" android:textSize="22sp" android:textColor="#1F2A44" android:layout_marginStart="15dp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_urgent" android:layout_width="match_parent" android:layout_height="55dp" android:text="Appel Urgent" android:textStyle="bold" android:textColor="@android:color/white" app:cornerRadius="20dp" android:backgroundTint="#E53935" android:layout_marginTop="15dp" android:layout_marginBottom="10dp" app:icon="@drawable/ic_sos" app:iconTint="@android:color/white" app:iconGravity="textStart" app:iconPadding="12dp" app:iconSize="24dp" />
+
+        <!-- Grid for Cards -->
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="2" android:rowCount="3" android:useDefaultMargins="true" android:alignmentMode="alignMargins">
+
+            <!-- Card 1: Chercher Medecin -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardDoctor" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="8dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="#3A8DFF" app:cardElevation="4dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/doctor_blue" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chercher\nMédecin" android:textColor="#FFF" android:textStyle="bold" android:gravity="center" android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 2: Mes Rendez-vous -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardAppointments" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="8dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="#FF9800" app:cardElevation="4dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/rendezvous" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mes\nRendez-vous" android:textColor="#FFF" android:textStyle="bold" android:gravity="center" android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 3: Mon Dossier -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardDossier" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="8dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="#4CAF50" app:cardElevation="4dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/patient" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mon\nDossier" android:textColor="#FFF" android:textStyle="bold" android:gravity="center" android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 4: Résultats Labo -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardLabResults" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="8dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="#009688" app:cardElevation="4dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@android:drawable/ic_menu_compass" app:tint="#FFF"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Résultats\nLabo" android:textColor="#FFF" android:textStyle="bold" android:gravity="center" android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 5: Médicaments -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardMedicaments" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="8dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="#1F2A44" app:cardElevation="4dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/medicine_icon" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mes\nMédicaments" android:textColor="#FFF" android:textStyle="bold" android:gravity="center" android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 6: Messages -->
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cardMessages" android:layout_width="0dp" android:layout_height="140dp" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="8dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="#9C27B0" app:cardElevation="4dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <ImageView android:layout_width="50dp" android:layout_height="50dp" android:src="@android:drawable/ic_dialog_email" app:tint="#FFF"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mes\nMessages" android:textColor="#FFF" android:textStyle="bold" android:gravity="center" android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.cardview.widget.CardView android:id="@+id/cardMap" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="16dp" app:cardElevation="4dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:padding="16dp">
+
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_dialog_map" app:tint="#D32F2F" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Hospitals Map" android:textColor="#333333" android:textSize="14sp" android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:background="#F5F9FF" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:elevation="4dp" android:gravity="center_horizontal" android:layout_marginStart="12dp" android:layout_marginEnd="12dp" android:clipToPadding="false" android:paddingTop="18dp" android:paddingBottom="18dp" android:backgroundTint="#E9F1FF" android:backgroundTintMode="src_over" android:radius="18dp">
+
+            <TextView android:id="@+id/tvDailyAdviceTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Conseil du jour" android:textStyle="bold" android:textSize="18sp" android:textColor="#1F2A44" />
+
+            <TextView android:id="@+id/tvDailyAdvice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buvez suffisamment d’eau aujourd’hui pour rester en bonne santé 💧" android:textSize="15sp" android:textColor="#3A4A63" android:layout_marginTop="6dp" android:gravity="center" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_logout" android:layout_width="match_parent" android:layout_height="60dp" android:text="Déconnexion" android:textSize="18sp" android:textStyle="bold" android:textColor="#FFFFFF" app:cornerRadius="16dp" android:backgroundTint="#B00020" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" app:elevation="4dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
