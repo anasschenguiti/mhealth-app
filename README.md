@@ -210,12 +210,12 @@ erDiagram
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/m-health.git
-   cd m-health
+   git clone https://github.com/anasschenguiti/mhealth-app.git
+   cd mhealth-app
    ```
 
 2. **Open the project in Android Studio**:
-   - Select **File > Open...** and navigate to the cloned `m-health` folder.
+   - Select **File > Open...** and navigate to the cloned `mhealth-app` folder.
    - Wait for Gradle to automatically download dependencies and sync.
 
 3. **Build the APK via command line** *(Optional)*:
@@ -255,7 +255,7 @@ Pre-seeded credentials are automatically injected into the SQLite database for i
 ## 📂 Project Structure
 
 ```text
-m-health/
+mhealth-app/
 ├── app/
 │   ├── src/
 │   │   ├── main/
